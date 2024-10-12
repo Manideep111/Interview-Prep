@@ -1,0 +1,21 @@
+SOLID principles? 
+    S -> Single responsibility 
+      One class will have a single responsibility.
+    O -> Open/closed
+      Classes should be open for extension and closed for modification. 
+    L -> Liskov Substitution
+      It states that object of parent class should be able to be replaced by object of a subclass without affecting the correctness of the program
+    I -> Interface segregation
+      Any class should not be forced to implement the methods it doesnot require. Simply, classes should have small, focused interfaces
+      rather than one monolithic interface for all the methods. 
+    D -> Dependency inversion
+      It states that high level modules should not depend on low-level modules, rather both should depend on abstractions.
+What is serialization, How do you serialize a class?
+  serialization is the process of converting objects into stream of bytes. We can serialize an object in one JVM and deserialize it in another JVM. 
+  To serialize a class, the class needs to implement Serializable and declare serialVersionUID. serialVersionUID helps during deserialisation to verify 
+  that the sender and reciever of a serialized object loaded classes for that objecct that are compatible wrt Serialization.
+  If the desrialized object is different than that of Serialized obnject, it throws an InvalidClassException.
+How to prevent a field getting serialized?
+  Add @Transient to that field. 
+Does static fields get serialized?
+  No, serialization is for objects. Since static fields doesnot depend on objects, they will not get serialized. 
