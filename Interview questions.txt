@@ -18,4 +18,5 @@ What is serialization, How do you serialize a class?
 How to prevent a field getting serialized?
   Add @Transient to that field. 
 Does static fields get serialized?
-  No, serialization is for objects. Since static fields doesnot depend on objects, they will not get serialized. 
+  No, serialization is for objects. Since static fields doesnot depend on objects, they will not get serialized.
+
